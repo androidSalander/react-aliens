@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route, NavLink } from 'react-router-dom'
-import './App.css'
+import './Main.css'
+import styles from './App.modules.css'
 import Home from './Home'
 import AllConspiraciesContainer from './containers/AllConspiraciesContainer'
 import Search from './components/Search'

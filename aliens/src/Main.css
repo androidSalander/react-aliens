@@ -1,5 +1,6 @@
 body {
-  background-image: url("images/ufomyst.webp");
+  background-image: url("images/gizaUfos.jpg");
+  background-size: contain;
   font-family: 'Roboto Mono', monospace;
   padding: 10px;
 }

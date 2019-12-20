@@ -1,6 +1,10 @@
 import React from 'react'
 
 function Search(props) {
+  //dear search function
+  //i want you to take rowid as user input
+  //map thru the array of all conspiracies
+  //in a new component display the single result from rowid
   return(
     <div>
       <form type="text" onSubmit={props.searchSubmit}>
