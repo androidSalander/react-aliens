@@ -6,6 +6,7 @@ Wireframe
 ## Wireframe
 
 ![Wireframe](/src/images/wireframe.jpg)
+<img src="/src/images/wireframe.jpg">
 
 # Create React App
 
