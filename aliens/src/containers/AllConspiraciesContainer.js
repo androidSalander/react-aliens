@@ -22,13 +22,13 @@ class AllConspiraciesContainer extends Component {
       .catch(err => console.log("it's not an error, it's aliens", err))
   }
 
-  handleDelete = () => {
-    console.log(this.state.conspiracies)
-    fetch(`http://localhost:7777/conspiracy/${this.state.conspiracies.rowid}`, {
+  handleDelete = (rowid) => {
+    //console.log(this.state.conspiracies)
+    fetch(`http://localhost:7777/conspiracy/${rowid}`, {
       method: 'DELETE'
     })
       .then(res => {
-        console.log('ayy lmao')
+        console.log('ayy lmao', res)
       })
       .catch(err => console.log("it's not an error, it's aliens", err))
   }
@@ -43,7 +43,7 @@ class AllConspiraciesContainer extends Component {
             <strong>Proof:</strong> {conspiracy.proof} <br/>
             <strong>Mainstream Science Says:</strong> {conspiracy.mainstream_science} <br/>
             <strong>Year:</strong> {conspiracy.year} <br/>
-            <button onClick={this.handleDelete}>Delete</button>
+            <button onClick={() => this.handleDelete(conspiracy.rowid)} >Delete</button>
             <button>Update</button>
           </li>
         </div>
