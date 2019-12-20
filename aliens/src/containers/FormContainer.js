@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Form from '../components/Form'
-import UpdateForm from '../components/UpdateForm'
 
 class FormContainer extends Component {
   state = {
@@ -50,45 +49,6 @@ class FormContainer extends Component {
     .catch(error => console.log(error))
   }
 
-  handleUpdate = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
-  }
-
-  submitUpdate = (event) => {
-    event.preventDefault()
-    return fetch('http://localhost:7777/conspiracy', {
-      method: 'PUT',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        keyword: this.state.keyword,
-        description: this.state.description,
-        proof: this.state.proof,
-        mainstream_science: this.state.mainstream_science,
-        year: this.state.year
-      })
-    })
-    .then(res => {
-      return res.json()
-    })
-    .then(data => {
-      this.setState({
-        keyword: '',
-        description: '',
-        proof: '',
-        mainstream_science: '',
-        year: ''
-      }, () => {
-        this.props.getAllConspiracies()
-      })
-    })
-    .catch(error => console.log(error))
-  }
-
   render() {
     return(
       <div>
@@ -97,11 +57,6 @@ class FormContainer extends Component {
           {...this.state}
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}
-        />
-        <UpdateForm
-          {...this.state}
-          handleUpdate={this.handleUpdate}
-          submitUpdate={this.submitUpdate}
         />
       </div>
     )

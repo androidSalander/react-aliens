@@ -15,8 +15,8 @@ class App extends Component {
     this.getOneConspiracy()
   }
 
-  getOneConspiracy = () => {
-    return fetch(`http://localhost:7777/conspiracy/${this.state.query}`)
+  getOneConspiracy = (rowid) => {
+    return fetch(`http://localhost:7777/conspiracy/${rowid}`)
       .then(res => res.json())
       .then(data => this.setState({ conspiracy: data }))
       .catch(err => console.log("it's not an error, it's aliens", err))
@@ -39,8 +39,8 @@ class App extends Component {
       <NavLink className="nav-link" to={'/'}>HOME <span role="img" aria-label="alien face emoji">👽</span></NavLink>
       <NavLink className="nav-link" to={'/conspiracies'}>CONSPIRACIES</NavLink>
       <Search
-        onInput={this.onInput}
         searchSubmit={this.searchSubmit}
+        onInput={this.onInput}
       />
       <br/>
         <Switch>

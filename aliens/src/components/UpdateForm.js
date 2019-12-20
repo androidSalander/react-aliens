@@ -4,7 +4,7 @@ class UpdateForm extends Component {
   render() {
     return(
       <div>
-        <h1>Update a Theory!</h1>
+        <p>Something wrong?? Update!</p>
         <form
           type="text"
           className="submit-theory"
