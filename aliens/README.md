@@ -1,12 +1,48 @@
 # Ancient Astronaut App
 
 ## Table of Contents
+
 Wireframe
+Tech Used
+API Documentation
+Overview
+Stretch Goals
 
 ## Wireframe
 
 ![Wireframe](/src/images/wireframe.jpg)
 <img src="/src/images/wireframe.jpg">
+
+## Tech Used
+
+JavaScript
+Create React App/React
+Node/Nodemon
+SQLite3
+Atom
+NPM
+DB Browser for SQLite
+Postman
+iTerm2
+[Trello](https://trello.com/b/i88Yp5WK/react-aliens)
+
+## API Documentation
+
+[Conspiracy API](https://git.generalassemb.ly/LtCommData/conspiracy_api)
+
+## Overview
+
+On this site, you can view the full conspiracy database or individual entries, add your own conspiracies, and delete/edit existing entries using the text input fields.
+
+## Stretch Goals
+
+- Add a search feature to display specific conspiracies on a new component page
+- Add images for each entry
+- Add the locations and episodes tables
+- Add the conspiracy/episode join table
+- Better CSS
+- Dropdown selection to add locations for conspiracy entries
+- Delete should auto-reset the page
 
 # Create React App
 
